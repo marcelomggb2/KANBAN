@@ -1,0 +1,340 @@
+/* Dark Theme for Kanban CRM */
+/* This overrides the inline styles for dark theme */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #1a1a1a;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}
+
+/* Main container - dark theme */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+/* Override light backgrounds */
+[style*="background: #f7f8fa"],
+[style*="background:#f7f8fa"],
+[style*="background: rgb(247, 248, 250)"] {
+  background: #1a1a1a !important;
+}
+
+/* Dark cards/surfaces */
+[style*="background: #ffffff"],
+[style*="background:#ffffff"],
+[style*="background: white"],
+[style*="background: rgb(255, 255, 255)"] {
+  background: #262626 !important;
+}
+
+/* Dark borders */
+[style*="border: 1px solid #e5e7eb"],
+[style*="border:1px solid #e5e7eb"],
+[style*="borderColor: #e5e7eb"],
+[style*="borderColor:#e5e7eb"] {
+  border-color: #2a2a2a !important;
+}
+
+/* Text colors */
+[style*="color: #1f2937"],
+[style*="color:#1f2937"],
+[style*="color: #111827"] {
+  color: #ffffff !important;
+}
+
+[style*="color: #6b7280"],
+[style*="color:#6b7280"],
+[style*="color: #9ca3af"] {
+  color: #a0a0a0 !important;
+}
+
+/* Kanban board specific */
+.kanban-board {
+  background: #1a1a1a !important;
+}
+
+.kanban-column {
+  background: transparent !important;
+}
+
+.kanban-column-header {
+  background: #262626 !important;
+  border-radius: 12px 12px 0 0 !important;
+  border-bottom-width: 3px !important;
+  border-bottom-style: solid !important;
+}
+
+.kanban-chat-card {
+  background: #262626 !important;
+  border: 1px solid #2a2a2a !important;
+  transition: all 0.2s ease !important;
+}
+
+.kanban-chat-card:hover {
+  background: #333333 !important;
+  border-color: #404040 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Search bar */
+input[type="text"],
+input[type="search"] {
+  background: #262626 !important;
+  border: 1px solid #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+input[type="text"]::placeholder,
+input[type="search"]::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Buttons */
+button {
+  transition: all 0.2s ease !important;
+}
+
+button:not([style*="background: linear-gradient"]):not([style*="background:#f97316"]) {
+  background: #262626 !important;
+  border-color: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+button:hover:not(:disabled) {
+  background: #333333 !important;
+  border-color: #404040 !important;
+}
+
+/* WhatsApp green buttons (keep) */
+button[style*="background: #f97316"],
+button[style*="background:#f97316"],
+button[style*="background: linear-gradient"] {
+  /* Keep original green */
+}
+
+/* Dropdowns/Select */
+select {
+  background: #262626 !important;
+  border: 1px solid #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+/* Modal/Dialog overlays */
+[style*="background: rgba(0, 0, 0, 0.5)"] {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Analytics dashboard */
+.analytics-card {
+  background: #262626 !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+/* Stage stats */
+.stage-stat-card {
+  background: #262626 !important;
+  border-left-width: 4px !important;
+  border-left-style: solid !important;
+}
+
+/* Empty states */
+.empty-state {
+  color: #a0a0a0 !important;
+}
+
+/* Loading spinner - keep visible */
+[style*="border-top: 4px solid #f97316"] {
+  /* Keep green spinner */
+}
+
+/* Chat card specific elements */
+.chat-name {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.chat-message {
+  color: #a0a0a0 !important;
+}
+
+.chat-time {
+  color: #6b7280 !important;
+}
+
+.chat-unread-badge {
+  background: #f97316 !important;
+  color: #ffffff !important;
+}
+
+/* Profile pictures - keep circular, add dark border */
+img[style*="border-radius: 50%"],
+img[style*="borderRadius:50%"] {
+  border: 2px solid #2a2a2a !important;
+}
+
+/* Icons */
+svg {
+  color: inherit !important;
+}
+
+/* Tooltips */
+[role="tooltip"] {
+  background: #262626 !important;
+  border: 1px solid #404040 !important;
+  color: #ffffff !important;
+}
+
+/* Context menus */
+[role="menu"] {
+  background: #262626 !important;
+  border: 1px solid #2a2a2a !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+[role="menuitem"]:hover {
+  background: #333333 !important;
+}
+
+/* Fix for specific WhatsApp green header - make it dark */
+[style*="linear-gradient(135deg, #f97316"] {
+  background: #1a1a1a !important;
+  border-bottom: 1px solid #2a2a2a !important;
+}
+
+/* Top bar specific */
+.top-bar {
+  background: #1a1a1a !important;
+  border-bottom: 1px solid #2a2a2a !important;
+}
+
+/* Column count badges */
+.column-count {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Value displays */
+.value-display {
+  color: #4ade80 !important; /* Green for money */
+}
+
+/* Drag preview */
+.drag-preview {
+  opacity: 0.8 !important;
+  transform: rotate(3deg) !important;
+}
+
+/* Phase complete badge */
+[style*="background: #dcfce7"],
+[style*="background:#dcfce7"] {
+  background: #1a472a !important; /* Dark green */
+  color: #4ade80 !important;
+}
+
+/* Error states */
+.error-message {
+  background: #3d1a1a !important; /* Dark red */
+  color: #fca5a5 !important;
+  border: 1px solid #7f1d1d !important;
+}
+
+/* Success states */
+.success-message {
+  background: #1a472a !important; /* Dark green */
+  color: #4ade80 !important;
+  border: 1px solid #14532d !important;
+}
+
+/* Warning states */
+.warning-message {
+  background: #422006 !important; /* Dark yellow */
+  color: #fbbf24 !important;
+  border: 1px solid #78350f !important;
+}
+
+/* Filters active state */
+button.filter-active {
+  background: #f97316 !important;
+  color: #ffffff !important;
+  border-color: #f97316 !important;
+}
+
+/* Pinned items */
+.pinned-indicator {
+  color: #fbbf24 !important;
+}
+
+/* Group indicators */
+.group-indicator {
+  color: #a0a0a0 !important;
+}
+
+/* Media type indicators */
+.media-type-icon {
+  color: #a0a0a0 !important;
+}
+
+/* Custom scrollbar for kanban columns */
+.kanban-column-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.kanban-column-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.kanban-column-content::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 3px;
+}
+
+.kanban-column-content::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}
+
+/* Animation improvements for dark theme */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kanban-chat-card {
+  animation: fadeIn 0.2s ease-out !important;
+}
+
+/* Ensure stage colors are visible */
+.stage-color-indicator {
+  opacity: 1 !important;
+  filter: brightness(1.2) !important; /* Brighten colors slightly for dark theme */
+}

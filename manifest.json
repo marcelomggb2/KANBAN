@@ -1,0 +1,74 @@
+{
+  "manifest_version": 3,
+  "name": "Wa Flow",
+  "version": "3.1",
+  "description": "Gerencie leads, mensagens e vendas direto do WhatsApp com praticidade e agilidade.",
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "tabs",
+    "unlimitedStorage",
+    "management",
+    "scripting",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": [
+    "*://*.whatsapp.com/*",
+    "*://web.whatsapp.com/*",
+    "https://darkseagreen-shark-784243.hostingersite.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "34": "icons/icon-34.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "34": "icons/icon-34.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.whatsapp.com/*"
+      ],
+      "js": [
+        "contentScript.bundle.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pkg/*.wasm",
+        "pkg/*.js",
+        "injectScript.bundle.js",
+        "dist/wppconnect-wa.js",
+        "wasm_license_sw.js",
+        "wasm_license_bg.wasm",
+        "kanban.html",
+        "kanban.bundle.js",
+        "kanban-dark.css",
+        "icons/*.png",
+        "icons/features/*.png",
+        "icons/features/*.svg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
