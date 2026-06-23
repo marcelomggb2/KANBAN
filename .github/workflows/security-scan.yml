@@ -7,6 +7,16 @@ on:
   pull_request:
 
 jobs:
+  manifest-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate manifest policy
+        run: |
+          node scripts/validate-manifest.js
+
   secret-scan:
     runs-on: ubuntu-latest
     steps:

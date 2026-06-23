@@ -13,6 +13,9 @@ issues=0
 
 while IFS= read -r file; do
   case "$file" in
+    scripts/scan-secrets.sh)
+      continue
+      ;;
     *.bundle.js|*.wasm|*.png|*.svg|*.backup|dist/*|pkg/*|icons/*|_locales/*)
       continue
       ;;
