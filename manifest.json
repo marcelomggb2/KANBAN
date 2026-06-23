@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Wa Flow",
-  "version": "3.1",
-  "description": "Gerencie leads, mensagens e vendas direto do WhatsApp com praticidade e agilidade.",
+  "name": "Wa Flow OSS",
+  "version": "3.1.1",
+  "description": "Gerencie leads e tarefas no WhatsApp Web com armazenamento local.",
   "default_locale": "en",
   "permissions": [
     "storage",
@@ -16,8 +16,16 @@
   "host_permissions": [
     "*://*.whatsapp.com/*",
     "*://web.whatsapp.com/*",
-    "https://darkseagreen-shark-784243.hostingersite.com/*",
-    "<all_urls>"
+    "https://api.openai.com/*",
+    "https://api.deepseek.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://app.lioncrm.in/*",
+    "https://backend.lotsofwms.in/*",
+    "https://wajsapi.titanchat.com.br/*",
+    "https://wppc-linkpreview.cloudtrix.com.br/*",
+    "https://waflow.com.br/*",
+    "https://suporte.waflow.com.br/*",
+    "https://cobrancas.uppermesh.com.br:8000/*"
   ],
   "background": {
     "service_worker": "background.bundle.js"
@@ -64,7 +72,7 @@
         "icons/features/*.svg"
       ],
       "matches": [
-        "<all_urls>"
+        "*://*.whatsapp.com/*"
       ]
     }
   ],
