@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Archives and local packaging
+*.zip
+
+# Temporary files
+*.tmp
+*.log
+
+# Local envs (if introduced later)
+.env
+.env.*
+!.env.example
